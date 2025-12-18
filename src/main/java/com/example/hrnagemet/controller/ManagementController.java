@@ -1,7 +1,5 @@
 package com.example.hrnagemet.controller;
 
-import com.example.hrnagemet.dao.DepartmenDao;
-import com.example.hrnagemet.entity.Departmen;
 import com.example.hrnagemet.entity.Employee;
 import com.example.hrnagemet.service.EmployeeService;
 import com.example.hrnagemet.service.impl.DepartmenServicelmpl;
@@ -18,8 +16,6 @@ import java.util.List;
 public class ManagementController {
    @Autowired
     private EmployeeService employeeService;
-   @Autowired
-    private DepartmenServicelmpl departmenServicelmpl;
 
     //员工入职
    @PostMapping("/recruit")
@@ -27,11 +23,7 @@ public class ManagementController {
        return employeeService.recruit(emp);
    }
 
-   //添加部门
-    @PostMapping("/departments")
-    public Departmen selectEmp(@RequestBody Departmen dept){
-       return departmenServicelmpl.addDepartment(dept);
-    }
+
 
    //查询所有员工
     @GetMapping("/employees")
@@ -45,11 +37,7 @@ public class ManagementController {
        return employeeService.getEmployeeById(empno);
     }
 
-    //查询部门
-    @GetMapping("/departman/{deptno}")
-    public Departmen getDepartmentById(@PathVariable Integer deptno){
-       return departmenServicelmpl.getDepartmentById(deptno);
-    }
+
 
 }
 

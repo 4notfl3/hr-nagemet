@@ -26,7 +26,6 @@ POST http://localhost:8080/departments
 Content-Type: application/json
 
 {
-  "deptno": 90,
   "dname":"无敌部",
     "loc":"辽宁"
 }

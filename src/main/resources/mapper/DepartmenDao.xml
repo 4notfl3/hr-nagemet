@@ -4,15 +4,11 @@
 <mapper namespace="com.example.hrnagemet.dao.DepartmenDao">
 
 
-    <select id="getMaxDeptno" resultType="java.lang.Integer">
-        SELECT COALESCE(MAX(deptno), 0) FROM dept
-    </select>
 
-    <insert id="insertDept" >
+    <insert id="insertDept">
         INSERT INTO dept (deptno, dname, loc)
         VALUES (
-                   #{deptno},
-                   #{dname},
+                   nextval('dept_id_seq'), #{dname},
                    #{loc}
                )
     </insert>
