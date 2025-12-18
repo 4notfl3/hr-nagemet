@@ -1,0 +1,13 @@
+package com.example.hrnagemet.dao;
+
+import com.example.hrnagemet.entity.Departmen;
+import com.example.hrnagemet.entity.Employee;
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface DepartmenDao {
+
+    int insertDept(Departmen dept);
+
+    Departmen deparById(Integer deptno);
+}

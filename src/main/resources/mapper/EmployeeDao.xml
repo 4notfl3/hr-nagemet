@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hrnagemet.dao.EmployeeDao">
+
+    <insert id="insertEmp" useGeneratedKeys="true" keyProperty="empno">
+        INSERT INTO emp (ename, status, job, mgr, hiredate, sal, comm, deptno)
+        VALUES (
+                   #{ename},
+                   #{status}::emp_status,
+                   #{job},
+                   #{mgr},
+                   #{hiredate},
+                   #{sal},
+                   #{comm},
+                   #{deptno}
+               )
+    </insert>
+
+    <select id="selectEmp" resultType="com.example.hrnagemet.entity.Employee">
+        SELECT
+            empno, ename, status, job, mgr, hiredate, sal, comm, deptno
+        FROM emp
+        ORDER BY empno DESC
+    </select>
+
+    <select id="findById" resultType="com.example.hrnagemet.entity.Employee">
+        SELECT
+            empno,
+            ename,
+            status::text,  job,
+            mgr,
+            hiredate,
+            sal,
+            comm,
+            deptno
+        FROM emp
+        WHERE empno = #{empno}
+    </select>
+
+
+
+</mapper>

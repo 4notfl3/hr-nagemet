@@ -1,0 +1,36 @@
+###员工入职
+POST http://localhost:8080/recruit
+Content-Type: application/json
+
+{
+  "ename": "李四",
+  "status": "待入职",
+  "job": "职员",
+  "mgr": 7566,
+  "sal": 5000.0,
+  "comm": 500.0,
+  "deptno": 20
+}
+
+###所有员工查询
+GET http://localhost:8080/employees
+
+###单个员工查询
+GET http://localhost:8080/employees/7369
+
+###部门查询
+GET http://localhost:8080/departman/30
+
+###添加部门
+POST http://localhost:8080/departments
+Content-Type: application/json
+
+{
+  "deptno": 90,
+  "dname":"无敌部",
+    "loc":"辽宁"
+}
+
+
+
+
