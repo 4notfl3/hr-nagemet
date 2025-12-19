@@ -17,6 +17,8 @@ public class DepartmenServicelmpl implements DepartmenService {
     @Autowired
     private DepartmenDao departmenDao;
 
+
+
     //添加部门
     public Departmen addDepartment(Departmen dept) {
         departmenDao.insertDept(dept);

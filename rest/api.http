@@ -30,6 +30,10 @@ Content-Type: application/json
     "loc":"辽宁"
 }
 
+###修改部门
+PUT http://localhost:8080/employees/transfer?empno=16&deptno=40
+
+
 
 
 

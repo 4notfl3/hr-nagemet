@@ -38,6 +38,12 @@
         WHERE empno = #{empno}
     </select>
 
+    <update id="updateEmployeeDept">
+        UPDATE emp
+        SET deptno = #{deptno}
+        WHERE empno = #{empno}
+    </update>
+
 
 
 </mapper>
