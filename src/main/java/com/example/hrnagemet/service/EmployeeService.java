@@ -1,6 +1,5 @@
 package com.example.hrnagemet.service;
 
-import com.example.hrnagemet.entity.Departmen;
 import com.example.hrnagemet.entity.Employee;
 
 import java.util.List;
@@ -13,6 +12,6 @@ public interface EmployeeService {
 
     Employee getEmployeeById(Integer empno);
 
-    boolean transferDepartment(Integer empno, Integer deptno);
+    String transferDepartment(Integer empno, Integer deptno);
 
 }

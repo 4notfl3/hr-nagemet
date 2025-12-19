@@ -14,9 +14,13 @@
     </insert>
 
     <select id="deparById" resultType="com.example.hrnagemet.entity.Departmen">
-        SELECT deptno, dname, loc
-        FROM dept
-        WHERE deptno = #{deptno}
+        SELECT * FROM dept WHERE deptno = #{deptno}
     </select>
+
+    <update id="updateEmployeeDept">
+        UPDATE emp
+        SET deptno = #{deptno}
+        WHERE empno = #{empno}
+    </update>
 
 </mapper>

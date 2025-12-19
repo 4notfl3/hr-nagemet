@@ -37,21 +37,9 @@ public class EmployeeController {
     }
 
     //修改员工部门
-//    @PostMapping("/transfer")
-//    public String transfer(Integer emp,Integer deptno){
-//       boolean success=employeeService.transferDepartment(emp,deptno);
-//       if(success){
-//           return "调岗成功";
-//       }
-//       else{
-//           return "调岗失败，没有此员工或者岗位";
-//       }
-//    }
-    // 必须明确指定为 @PutMapping，且路径要匹配
     @PutMapping("/employees/transfer")
     public String transfer(@RequestParam Integer empno, @RequestParam Integer deptno) {
-        boolean success = employeeService.transferDepartment(empno, deptno);
-        return success ? "调岗成功" : "调岗失败，没有此员工或者岗位";
+       return employeeService.transferDepartment(empno,deptno);
 
     }
 

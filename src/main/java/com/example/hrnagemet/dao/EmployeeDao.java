@@ -1,6 +1,7 @@
 package com.example.hrnagemet.dao;
 
 
+import com.example.hrnagemet.entity.Departmen;
 import com.example.hrnagemet.entity.Employee;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -16,5 +17,8 @@ public interface EmployeeDao {
 
     Employee findById(Integer empno);
 
-    int updateEmployeeDept(@Param("empno")Integer empno, @Param("deptno")Integer deptno);
+
+
+
+
 }

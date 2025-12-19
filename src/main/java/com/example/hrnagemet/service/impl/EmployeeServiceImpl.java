@@ -42,15 +42,26 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 //    修改员工部门
     @Override
-    public boolean transferDepartment(Integer empno,Integer deptno){
-        Departmen dept = departmenDao.deparById(deptno);
-        if(dept == null){
-            System.out.println("没有这个部门");
-            return false;
-        }
-        int rows =employeeDao.updateEmployeeDept(empno,deptno);
-        return rows > 0;
+    public String transferDepartment(Integer empno, Integer deptno){
+        Employee emp = getEmployeeById(empno);
+        if (emp == null)return "没有这个员工";
 
+        Departmen oldDept = departmenDao.deparById(emp.getDeptno());
+        String oldDeptName = (oldDept != null) ? oldDept.getDname() : "无部门";
+
+        Departmen newDept = departmenDao.deparById(deptno);
+        if (newDept == null)return "没有这个部门";
+
+        if(emp.getDeptno() == deptno){
+            return "员工已在【"+oldDept.getDname()+"】，无需重复转岗";
+        }
+
+        int rows = departmenDao.updateEmployeeDept(empno,deptno);
+
+        if(rows > 0){
+            return "员工【"+emp.getEname()+"】已从【"+oldDept.getDname()+"】转岗到【"+newDept.getDname()+"】";
+        }
+        return "调岗失败";
     }
 
 }
