@@ -40,11 +40,17 @@ public class EmployeeController {
     @PutMapping("/employees/transfer")
     public String transfer(@RequestParam Integer empno, @RequestParam Integer deptno) {
        return employeeService.transferDepartment(empno,deptno);
-
     }
+    //修改员工信息
+    @PutMapping("employees")
+    public String updateEmployee(@RequestBody Employee emp){
+       return employeeService.updateEmployee(emp);
+    }
+
     //删除员工
     @DeleteMapping("/employees/{empno}")
     public String deleteEmployee(@PathVariable Integer empno){return employeeService.deleteEmployee(empno);}
+
 
 
 }

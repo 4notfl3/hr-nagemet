@@ -64,6 +64,17 @@ public class EmployeeServiceImpl implements EmployeeService {
         return "调岗失败";
     }
 
+    //修改员工信息
+    @Override
+    public String updateEmployee(Employee emp) {
+        Employee  oldEmp = employeeDao.findById(emp.getEmpno());
+        if (oldEmp == null){
+            return "没有这个员工";
+        }
+        int rows = employeeDao.updateEmp(emp);
+        return rows > 0 ? "员工【"+oldEmp.getEname()+"】信息已更新" : "修改失败";
+    }
+
     //删除员工
     @Override
     public String deleteEmployee(Integer empno){

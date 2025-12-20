@@ -48,6 +48,18 @@
         DELETE FROM emp WHERE empno = #{empno}
     </delete>
 
+    <update id="updateEmp">
+        UPDATE emp
+        <set>
+            <if test="ename != null">ename = #{ename},</if>
+            <if test="job != null">job = #{job},</if>
+            <if test="mgr != null">mgr = #{mgr},</if> <if test="sal != null">sal = #{sal},</if>
+            <if test="comm != null">comm = #{comm},</if> <if test="deptno != null">deptno = #{deptno},</if>
+            <if test="status != null">status = #{status}::emp_status</if>
+        </set>
+        WHERE empno = #{empno}
+    </update>
+
 
 
 </mapper>

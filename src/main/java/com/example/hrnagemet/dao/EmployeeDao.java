@@ -18,4 +18,6 @@ public interface EmployeeDao {
 
     int deleteEmpById(@Param("empno")  Integer empno);
 
+    int updateEmp(Employee emp);
+
 }

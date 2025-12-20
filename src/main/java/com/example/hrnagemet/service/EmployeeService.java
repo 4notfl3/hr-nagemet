@@ -16,4 +16,6 @@ public interface EmployeeService {
 
     String deleteEmployee(Integer empno);
 
+    String updateEmployee(Employee emp);
+
 }
