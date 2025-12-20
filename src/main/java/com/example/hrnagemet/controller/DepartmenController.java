@@ -25,4 +25,9 @@ public class DepartmenController {
     public Departmen getDepartmentById(@PathVariable Integer deptno){
         return departmenServicelmpl.getDepartmentById(deptno);
     }
+    //删除功能
+    @DeleteMapping("/departman/{deptno}")
+    public String deleteDepartmentById(@PathVariable Integer deptno){
+        return departmenServicelmpl.deleteDepartment(deptno);
+    }
 }

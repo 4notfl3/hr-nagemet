@@ -15,7 +15,8 @@ Content-Type: application/json
 ###修改部门
 PUT http://localhost:8080/employees/transfer?empno=16&deptno=40
 
-
+###部门删除
+DELETE http://localhost:8080/departman/70
 
 
 

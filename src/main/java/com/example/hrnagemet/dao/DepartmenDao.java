@@ -11,6 +11,7 @@ public interface DepartmenDao {
 
     Departmen deparById(Integer deptno);
 
-
     int updateEmployeeDept(@Param("empno") Integer empno, @Param("deptno") Integer deptno);
+
+    int deleteByDeptno(@Param("deptno") Integer deptno);
 }

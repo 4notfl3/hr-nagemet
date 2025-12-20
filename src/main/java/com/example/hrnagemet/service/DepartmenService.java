@@ -11,4 +11,6 @@ public interface DepartmenService {
     Departmen addDepartment(Departmen departmen);
 
     Departmen getDepartmentById(Integer deptno);
+
+    String deleteDepartment(Integer deptno);
 }

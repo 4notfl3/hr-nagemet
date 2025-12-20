@@ -23,4 +23,9 @@
         WHERE empno = #{empno}
     </update>
 
+    <delete id="deleteByDeptno">
+        DELETE FROM dept WHERE deptno = #{deptno}
+    </delete>
+
+
 </mapper>

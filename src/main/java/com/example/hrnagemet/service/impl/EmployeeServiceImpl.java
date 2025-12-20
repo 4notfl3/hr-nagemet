@@ -65,6 +65,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     //删除员工
+    @Override
     public String deleteEmployee(Integer empno){
         Employee emp = employeeDao.findById(empno);
         if(emp == null){
