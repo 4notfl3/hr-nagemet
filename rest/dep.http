@@ -1,7 +1,5 @@
-
-
 ###部门查询
-GET http://localhost:8080/departman/30
+GET http://localhost:8080/departments/30
 
 ###添加部门
 POST http://localhost:8080/departments
@@ -12,11 +10,18 @@ Content-Type: application/json
     "loc":"辽宁"
 }
 
-###修改部门
-PUT http://localhost:8080/employees/transfer?empno=16&deptno=40
-
 ###部门删除
-DELETE http://localhost:8080/departman/70
+DELETE http://localhost:8080/departments/110
+
+###修改部门信息
+PUT http://localhost:8080/departments
+Content-Type: application/json
+
+{
+  "deptno": 90,
+  "dname":"无敌部",
+  "loc":"上海"
+}
 
 
 

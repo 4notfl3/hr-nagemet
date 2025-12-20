@@ -20,3 +20,6 @@ GET http://localhost:8080/employees/7369
 
 ###员工删除
 DELETE http://localhost:8080/employees/16
+
+###员工修改部门
+PUT http://localhost:8080/employees/transfer?empno=16&deptno=40

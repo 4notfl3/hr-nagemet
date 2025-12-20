@@ -27,5 +27,14 @@
         DELETE FROM dept WHERE deptno = #{deptno}
     </delete>
 
+    <update id="updateDept">
+        UPDATE dept
+        <set>
+            <if test="dname != null and dname != ''">dname = #{dname},</if>
+            <if test="loc != null and loc != ''">loc = #{loc}</if>
+        </set>
+        WHERE deptno = #{deptno}
+    </update>
+
 
 </mapper>

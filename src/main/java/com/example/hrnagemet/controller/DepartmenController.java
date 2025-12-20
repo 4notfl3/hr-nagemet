@@ -1,7 +1,7 @@
 package com.example.hrnagemet.controller;
 
 import com.example.hrnagemet.entity.Departmen;
-import com.example.hrnagemet.service.impl.DepartmenServicelmpl;
+import com.example.hrnagemet.service.DepartmenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,22 +12,28 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class DepartmenController {
     @Autowired
-    public DepartmenServicelmpl departmenServicelmpl;
+    public DepartmenService departmenService;
 
     //添加部门
     @PostMapping("/departments")
     public Departmen selectEmp(@RequestBody Departmen dept){
-        return departmenServicelmpl.addDepartment(dept);
+        return departmenService.addDepartment(dept);
     }
 
     //查询部门
-    @GetMapping("/departman/{deptno}")
+    @GetMapping("/departments/{deptno}")
     public Departmen getDepartmentById(@PathVariable Integer deptno){
-        return departmenServicelmpl.getDepartmentById(deptno);
+        return departmenService.getDepartmentById(deptno);
     }
     //删除功能
-    @DeleteMapping("/departman/{deptno}")
+    @DeleteMapping("/departments/{deptno}")
     public String deleteDepartmentById(@PathVariable Integer deptno){
-        return departmenServicelmpl.deleteDepartment(deptno);
+        return departmenService.deleteDepartment(deptno);
     }
+    //修改部门信息
+    @PutMapping("/departments")
+    public String updateDepartment(@RequestBody Departmen dept){
+        return departmenService.updateDeptInfo(dept);
+    }
+
 }

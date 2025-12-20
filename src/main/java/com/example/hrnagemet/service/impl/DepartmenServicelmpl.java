@@ -45,5 +45,16 @@ public class DepartmenServicelmpl implements DepartmenService {
         }
         return "删除失败";
     }
+    //修改部门信息
+    @Override
+    public String updateDeptInfo(Departmen dept){
+        Departmen exist = departmenDao.deparById(dept.getDeptno());
+        if (exist == null) {
+            return "修改失败：部门不存在";
+        }
+        int rows = departmenDao.updateDept(dept);
+        return  rows > 0 ? "部门信息已更新" : "修改失败";
+    }
+
 
 }
