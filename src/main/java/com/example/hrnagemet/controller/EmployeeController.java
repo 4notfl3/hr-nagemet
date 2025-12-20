@@ -42,6 +42,9 @@ public class EmployeeController {
        return employeeService.transferDepartment(empno,deptno);
 
     }
+    //删除员工
+    @DeleteMapping("/employees/{empno}")
+    public String deleteEmployee(@PathVariable Integer empno){return employeeService.deleteEmployee(empno);}
 
 
 }

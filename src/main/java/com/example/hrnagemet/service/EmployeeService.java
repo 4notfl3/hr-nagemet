@@ -14,4 +14,6 @@ public interface EmployeeService {
 
     String transferDepartment(Integer empno, Integer deptno);
 
+    String deleteEmployee(Integer empno);
+
 }

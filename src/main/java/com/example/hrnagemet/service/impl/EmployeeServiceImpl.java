@@ -64,4 +64,17 @@ public class EmployeeServiceImpl implements EmployeeService {
         return "调岗失败";
     }
 
+    //删除员工
+    public String deleteEmployee(Integer empno){
+        Employee emp = employeeDao.findById(empno);
+        if(emp == null){
+            return "删除失败：员工编号"+empno+"不存在";
+        }
+        int rows = employeeDao.deleteEmpById(empno);
+        if(rows > 0){
+            return "员工【"+emp.getEname()+"】已被删除";
+        }
+        return "删除失败";
+    }
+
 }
