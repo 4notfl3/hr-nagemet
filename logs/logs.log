@@ -1,0 +1,20 @@
+2025-12-21T18:02:00.782+08:00  INFO 24536 --- [hr-nagemet] [main] com.example.hrnagemet.HrApp              : Starting HrApp using Java 17.0.15 with PID 24536 (D:\Tech\Code\notfl\hr-nagemet\target\classes started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2025-12-21T18:02:00.784+08:00  INFO 24536 --- [hr-nagemet] [main] com.example.hrnagemet.HrApp              : No active profile set, falling back to 1 default profile: "default"
+2025-12-21T18:02:01.703+08:00  INFO 24536 --- [hr-nagemet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-12-21T18:02:01.717+08:00  INFO 24536 --- [hr-nagemet] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-21T18:02:01.717+08:00  INFO 24536 --- [hr-nagemet] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-12-21T18:02:01.751+08:00  INFO 24536 --- [hr-nagemet] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-21T18:02:01.752+08:00  INFO 24536 --- [hr-nagemet] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 928 ms
+2025-12-21T18:02:02.241+08:00  INFO 24536 --- [hr-nagemet] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-12-21T18:02:02.248+08:00  INFO 24536 --- [hr-nagemet] [main] com.example.hrnagemet.HrApp              : Started HrApp in 1.832 seconds (process running for 2.301)
+2025-12-21T18:02:09.222+08:00  INFO 24536 --- [hr-nagemet] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-21T18:02:09.222+08:00  INFO 24536 --- [hr-nagemet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-21T18:02:09.223+08:00  INFO 24536 --- [hr-nagemet] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-12-21T18:02:09.252+08:00  INFO 24536 --- [hr-nagemet] [http-nio-8080-exec-1] c.e.h.service.impl.DepartmenServicelmpl  : 正在查询编号为 30 的部门详情
+2025-12-21T18:02:09.267+08:00  INFO 24536 --- [hr-nagemet] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-12-21T18:02:09.432+08:00  INFO 24536 --- [hr-nagemet] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32f7ea76
+2025-12-21T18:02:09.433+08:00  INFO 24536 --- [hr-nagemet] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-12-21T18:02:29.677+08:00  INFO 24536 --- [hr-nagemet] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-21T18:02:29.738+08:00  INFO 24536 --- [hr-nagemet] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-21T18:02:29.742+08:00  INFO 24536 --- [hr-nagemet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-12-21T18:02:29.744+08:00  INFO 24536 --- [hr-nagemet] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
