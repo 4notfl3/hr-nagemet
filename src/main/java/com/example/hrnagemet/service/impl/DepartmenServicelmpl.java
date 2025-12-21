@@ -6,6 +6,8 @@ import com.example.hrnagemet.service.DepartmenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author notfl
  * @date 2025/12/18 14:37
@@ -25,7 +27,13 @@ public class DepartmenServicelmpl implements DepartmenService {
         return dept;
     }
 
-    //查询部门
+    //查询全部部门
+    @Override
+    public List<Departmen> getAllDepartments() {
+        return departmenDao.getDepartments();
+    }
+
+    //查询单个部门
     @Override
     public Departmen getDepartmentById(Integer deptno) {
         return departmenDao.deparById(deptno);

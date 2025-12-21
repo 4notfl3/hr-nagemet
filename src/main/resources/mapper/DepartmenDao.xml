@@ -36,5 +36,12 @@
         WHERE deptno = #{deptno}
     </update>
 
+    <select id="getDepartments" resultType="com.example.hrnagemet.entity.Departmen">
+        SELECT
+            deptno, dname, loc
+        FROM dept
+        ORDER BY deptno DESC
+    </select>
+
 
 </mapper>

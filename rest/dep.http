@@ -1,7 +1,7 @@
 ###单个部门查询
 GET http://localhost:8080/departments/30
 
-###所以部门查询
+###所有部门查询
 GET http://localhost:8080/departments
 
 ###添加部门
