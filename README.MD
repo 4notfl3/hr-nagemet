@@ -11,11 +11,3 @@
 接口规范化：统一返回类
 
 
-#### 数据库序列（Sequence）不同步问题：
-SQL自动检测deptno的最大值或者emono的最大值，使用
-
-重置部门表序列:
-`SELECT setval('dept_id_seq', (SELECT COALESCE(MAX(deptno), 1) FROM dept));`
-
-重置员工表序列:
-`SELECT setval('emp_id_seq', (SELECT COALESCE(MAX(empno), 1) FROM emp));`
