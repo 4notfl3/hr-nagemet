@@ -14,14 +14,14 @@ Content-Type: application/json
 }
 
 ###部门删除
-DELETE http://localhost:8080/departments/110
+DELETE http://localhost:8080/departments/90
 
 ###修改部门信息
 PUT http://localhost:8080/departments
 Content-Type: application/json
 
 {
-  "deptno": 120,
+  "deptno": 80,
   "dname":"无敌部",
   "loc":"北京"
 }

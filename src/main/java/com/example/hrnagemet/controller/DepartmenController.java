@@ -4,6 +4,7 @@ import com.example.hrnagemet.common.Result;
 import com.example.hrnagemet.entity.Departmen;
 import com.example.hrnagemet.entity.Employee;
 import com.example.hrnagemet.service.DepartmenService;
+import com.example.hrnagemet.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,53 +14,65 @@ import java.util.List;
  * @author notfl
  * @date 2025/12/18 19:19
  */
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
+@RequestMapping("/departments")
 public class DepartmenController {
     @Autowired
-    public DepartmenService departmenService;
+    private DepartmenService departmenService;
+
+    @Autowired
+    private EmployeeService employeeService;
 
     //添加部门
-    @PostMapping("/departments")
-    public Result<Departmen> selectEmp(@RequestBody Departmen dept){
-        Departmen result = departmenService.addDepartment(dept);
-        return Result.success(result);
+    @PostMapping
+    private Result<Departmen>  saveDepartmen(@RequestBody Departmen dept){
+        Departmen maxDept = departmenService.lambdaQuery()
+                        .orderByDesc(Departmen::getDeptno)
+                                .last("limit 1")
+                                        .one();
+        int netxNo = 10;
+        if(maxDept != null){
+            netxNo = maxDept.getDeptno()+10;
+        }
+        dept.setDeptno(netxNo);
+        departmenService.save(dept);
+        return Result.success(dept);
     }
 
-    //查询单个部门
-    @GetMapping("/departments/{deptno}")
-    public Result<Departmen> getDepartmentById(@PathVariable Integer deptno){
-        Departmen result = departmenService.getDepartmentById(deptno);
-        if (result == null){
-            return Result.error("为查询到编号为："+deptno+"的部门");
-        }
-        return Result.success(result);
+    //id查询部门
+    @GetMapping("{deptno}")
+    public Result<Departmen> getDepartmen(@PathVariable Integer deptno) {
+        Departmen dept = departmenService.getById(deptno);
+        return Result.success(dept);
     }
 
     //查询全部部门
-    @GetMapping("/departments")
-    public Result<List<Departmen>> employees(){
-        List<Departmen> result = departmenService.getAllDepartments();
-        return Result.success(result);
+    @GetMapping
+    public Result<List<Departmen>> getAllDepartmen(){
+        List<Departmen> list = departmenService.list();
+        return Result.success(list);
     }
 
-    //删除功能
-    @DeleteMapping("/departments/{deptno}")
-    public Result<String> deleteDepartmentById(@PathVariable Integer deptno){
-        String result = departmenService.deleteDepartment(deptno);
-        if (result.contains("已被删除")){
-            return Result.success(result);
+    //删除部门
+    @DeleteMapping("{deptno}")
+    public Result<String> deleteDepartmen(@PathVariable Integer deptno) {
+        long count = employeeService.lambdaQuery().eq(Employee::getDeptno, deptno).count();
+        if (count > 0) {
+            return Result.error("该部门下尚有员工，禁止删除！");
         }
-        return Result.error(result);
+        boolean success = departmenService.removeById(deptno);
+        return success ? Result.success("删除成功") : Result.error("删除失败");
     }
 
     //修改部门信息
-    @PutMapping("/departments")
-    public Result<String> updateDepartment(@RequestBody Departmen dept){
-        String msg = departmenService.updateDeptInfo(dept);
-        if (msg.contains("已更新")){
-            return Result.success(msg);
+    @PutMapping
+    public Result<Departmen> updateDepartmen(@RequestBody Departmen dept){
+        boolean success = departmenService.updateById(dept);
+        if (success) {
+            return Result.success(departmenService.getById(dept.getDeptno()));
         }
-        return Result.error(msg);
+        return Result.error(" 修改失败，部门编号不存在");
     }
 
 }
