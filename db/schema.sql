@@ -134,4 +134,3 @@ WHERE e.status = '在职'
 GROUP BY d.deptno, d.dname
 HAVING d.deptno IS NOT NULL
 ORDER BY 部门总薪资 DESC;
-

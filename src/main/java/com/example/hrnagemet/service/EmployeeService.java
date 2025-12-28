@@ -10,4 +10,5 @@ import com.example.hrnagemet.entity.Employee;
 
 public interface EmployeeService extends IService<Employee> {
 
+
 }

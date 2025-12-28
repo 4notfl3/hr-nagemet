@@ -14,7 +14,8 @@
     <name>hr-nagemet</name>
     <description>hr-nagemet</description>
     <url/>
-    <licenses>
+    <licenses
+    >
         <license/>
     </licenses>
     <developers>
@@ -59,6 +60,10 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
             <version>3.5.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
         </dependency>
     </dependencies>
 

@@ -1,6 +1,7 @@
 package com.example.hrnagemet.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 import lombok.Data;
 import org.apache.ibatis.type.JdbcType;
 
@@ -8,7 +9,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
-@TableName("emp")
+@TableName(value = "emp",autoResultMap = true)
 public class Employee {
     @TableId (value = "empno",type = IdType.AUTO)
     private Integer empno;
@@ -24,5 +25,8 @@ public class Employee {
     private BigDecimal sal;
     private BigDecimal comm;
     private Integer deptno;
+
+    @TableField(value = "emergency_contacts",typeHandler = JacksonTypeHandler.class)
+    private Object emergencyContacts;
 
 }
