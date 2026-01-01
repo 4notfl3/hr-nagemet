@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.hrnagemet.dao.EmployeeDao">
+
+    <select id="selectEmployeeDetailPage" resultType="com.example.hrnagemet.entity.EmployeeVO">
+        SELECT
+        e.empno,
+        e.ename,
+        d.dname,
+        (COALESCE(e.sal, 0) + COALESCE(e.comm, 0)) AS totalIncome,
+        s.grade AS salaryGrade,
+        (SELECT STRING_AGG(sub.ename, ', ') FROM emp sub WHERE sub.mgr = e.empno) AS subordinates,
+        e.emergency_contacts AS emergencyContacts
+        FROM emp e
+        LEFT JOIN dept d ON e.deptno = d.deptno
+        LEFT JOIN salgrade s ON (COALESCE(e.sal, 0) + COALESCE(e.comm, 0)) BETWEEN s.losal AND s.hisal
+        <where>
+            <if test="ename != null and ename != ''">
+                e.ename LIKE CONCAT('%', #{ename}, '%')
+            </if>
+        </where>
+        ORDER BY e.empno ASC
+    </select>
+
+</mapper>

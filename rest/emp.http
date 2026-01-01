@@ -15,11 +15,11 @@ Content-Type: application/json
 ###所有员工查询
 GET http://localhost:8080/employees
 
+###部门id查询员工
+GET http://localhost:8080/page
+
 ###id查询员工
 GET http://localhost:8080/employees/7369
-
-###部门id查询员工
-GET http://localhost:8080/employees/dept/20
 
 ###员工删除
 DELETE http://localhost:8080/employees/8013
@@ -47,3 +47,6 @@ Content-Type: application/json
   "comm": 500.0,
   "deptno": 20
 }
+
+
+

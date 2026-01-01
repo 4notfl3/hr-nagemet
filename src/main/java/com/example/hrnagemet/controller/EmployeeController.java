@@ -22,9 +22,6 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @Autowired
-    private DepartmenService departmenService;
-
     //添加员工
     @PostMapping
     public Result<Employee> addEmployee(@RequestBody Employee emp) {
@@ -37,6 +34,8 @@ public class EmployeeController {
     public Result<List<Employee>> getAllEmployees() {
         List<Employee> list = employeeService.list();
         return Result.success(list);
+
+
     }
 
     //id查询员工
@@ -45,8 +44,6 @@ public class EmployeeController {
         Employee emp = employeeService.getById(empno);
         return Result.success(emp);
     }
-
-    //部门id查员工
 
 
     //修改员工部门
