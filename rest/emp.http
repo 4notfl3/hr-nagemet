@@ -16,7 +16,7 @@ Content-Type: application/json
 GET http://localhost:8080/employees
 
 ###部门id查询员工
-GET http://localhost:8080/page
+GET http://localhost:8080/employees/dept/20
 
 ###id查询员工
 GET http://localhost:8080/employees/7369

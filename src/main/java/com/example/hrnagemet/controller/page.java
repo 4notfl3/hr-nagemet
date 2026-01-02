@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.*;
  */
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
-@RequestMapping("/page")
+@RequestMapping("/employees")
 public class page {
 
     @Autowired
     private EmployeeDao employeeDao;
 
     //部门id查员工
-    @GetMapping
+    @GetMapping("/dept/{depnot}")
     private Result<IPage<EmployeeVO>>getEmployeePage(
             @RequestParam(defaultValue = "1") int current,
             @RequestParam(defaultValue = "10") int size,
