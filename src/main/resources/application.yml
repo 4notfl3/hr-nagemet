@@ -13,13 +13,5 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
 
-logging:
-  file:
-    name: logs/hr-app.log
-  level:
-    root: info
-    com.example.hrnagemet: info
-    com.example.hrnagemet.aspect: debug
