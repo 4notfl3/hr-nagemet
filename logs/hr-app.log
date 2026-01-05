@@ -2,3 +2,7 @@
 2026-01-05 17:47:15.823 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
 2026-01-05 17:47:15.825 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-01-05 17:47:15.827 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-05 18:10:29.276 [main] INFO  c.e.h.HrNagemetApplicationTests - Starting HrNagemetApplicationTests using Java 17.0.15 with PID 21604 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:10:29.278 [main] INFO  c.e.h.HrNagemetApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:10:32.766 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:10:33.362 [main] INFO  c.e.h.HrNagemetApplicationTests - Started HrNagemetApplicationTests in 4.71 seconds (process running for 7.625)
