@@ -6,3 +6,200 @@
 2026-01-05 18:10:29.278 [main] INFO  c.e.h.HrNagemetApplicationTests - No active profile set, falling back to 1 default profile: "default"
 2026-01-05 18:10:32.766 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
 2026-01-05 18:10:33.362 [main] INFO  c.e.h.HrNagemetApplicationTests - Started HrNagemetApplicationTests in 4.71 seconds (process running for 7.625)
+2026-01-05 18:29:07.039 [main] INFO  c.e.hrnagemet.EmpControllerTest - Starting EmpControllerTest using Java 17.0.15 with PID 9044 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:29:07.040 [main] INFO  c.e.hrnagemet.EmpControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:29:10.414 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:29:11.064 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-05 18:29:11.064 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-05 18:29:11.065 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-01-05 18:29:11.109 [main] INFO  c.e.hrnagemet.EmpControllerTest - Started EmpControllerTest in 4.714 seconds (process running for 7.036)
+2026-01-05 18:29:11.923 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-05 18:29:12.186 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f779773
+2026-01-05 18:29:12.188 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-05 18:29:12.281 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ================  操作日志  ================
+2026-01-05 18:29:12.282 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 操作名称   : id查询员工
+2026-01-05 18:29:12.282 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求 URL   : http://localhost/employees/7369
+2026-01-05 18:29:12.282 [main] INFO  c.example.hrnagemet.aspect.LogAspect - HTTP 方法  : GET
+2026-01-05 18:29:12.282 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行方法   : com.example.hrnagemet.controller.EmployeeController.getEmployee
+2026-01-05 18:29:12.283 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求参数   : [7369]
+2026-01-05 18:29:12.283 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行耗时   : 386 ms
+2026-01-05 18:29:12.283 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 返回结果   : Result(code=200, msg=操作成功, data=Employee(empno=7369, ename=马云, status=在职, job=职员, mgr=7902, hiredate=1980-12-17, sal=800.00, comm=null, deptno=20, emergencyContacts=[{name=张女士, methods=[{type=phone, value=13800000001}, {type=wechat, value=jack_wife}], relation=配偶}, {name=马老先生, methods=[{type=phone, value=13900000001}], relation=父亲}], contact_info=12488456182, email=2490782555@qq.com))
+2026-01-05 18:29:12.291 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ===========================================
+2026-01-05 18:29:12.561 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.EmpServiceTest]: EmpServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:29:12.563 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.EmpServiceTest
+2026-01-05 18:29:12.597 [main] INFO  c.example.hrnagemet.EmpServiceTest - Starting EmpServiceTest using Java 17.0.15 with PID 9044 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:29:12.598 [main] INFO  c.example.hrnagemet.EmpServiceTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:29:13.082 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:29:13.187 [main] INFO  c.example.hrnagemet.EmpServiceTest - Started EmpServiceTest in 0.621 seconds (process running for 9.114)
+2026-01-05 18:29:13.210 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-01-05 18:29:13.364 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@20dd6121
+2026-01-05 18:29:13.365 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-01-05 18:29:13.573 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.HrNagemetApplicationTests]: HrNagemetApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:29:13.574 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.HrNagemetApplicationTests
+2026-01-05 18:29:13.644 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-05 18:29:13.651 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-05 18:29:13.658 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-01-05 18:29:13.711 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-01-05 18:35:01.974 [main] INFO  c.e.hrnagemet.EmpControllerTest - Starting EmpControllerTest using Java 17.0.15 with PID 3324 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:35:01.976 [main] INFO  c.e.hrnagemet.EmpControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:35:05.343 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:35:06.082 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-05 18:35:06.082 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-05 18:35:06.084 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2026-01-05 18:35:06.141 [main] INFO  c.e.hrnagemet.EmpControllerTest - Started EmpControllerTest in 4.838 seconds (process running for 7.225)
+2026-01-05 18:35:07.154 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-05 18:35:07.417 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@545fb9e
+2026-01-05 18:35:07.419 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-05 18:35:07.508 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ================  操作日志  ================
+2026-01-05 18:35:07.509 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 操作名称   : id查询员工
+2026-01-05 18:35:07.509 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求 URL   : http://localhost/employees/7369
+2026-01-05 18:35:07.509 [main] INFO  c.example.hrnagemet.aspect.LogAspect - HTTP 方法  : GET
+2026-01-05 18:35:07.509 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行方法   : com.example.hrnagemet.controller.EmployeeController.getEmployee
+2026-01-05 18:35:07.510 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求参数   : [7369]
+2026-01-05 18:35:07.510 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行耗时   : 386 ms
+2026-01-05 18:35:07.510 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 返回结果   : Result(code=200, msg=操作成功, data=Employee(empno=7369, ename=马云, status=在职, job=职员, mgr=7902, hiredate=1980-12-17, sal=800.00, comm=null, deptno=20, emergencyContacts=[{name=张女士, methods=[{type=phone, value=13800000001}, {type=wechat, value=jack_wife}], relation=配偶}, {name=马老先生, methods=[{type=phone, value=13900000001}], relation=父亲}], contact_info=12488456182, email=2490782555@qq.com))
+2026-01-05 18:35:07.517 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ===========================================
+2026-01-05 18:35:07.785 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.EmpServiceTest]: EmpServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:35:07.788 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.EmpServiceTest
+2026-01-05 18:35:07.844 [main] INFO  c.example.hrnagemet.EmpServiceTest - Starting EmpServiceTest using Java 17.0.15 with PID 3324 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:35:07.844 [main] INFO  c.example.hrnagemet.EmpServiceTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:35:08.422 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:35:08.551 [main] INFO  c.example.hrnagemet.EmpServiceTest - Started EmpServiceTest in 0.758 seconds (process running for 9.635)
+2026-01-05 18:35:08.574 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-01-05 18:35:08.659 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@2a75b9ec
+2026-01-05 18:35:08.660 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-01-05 18:35:08.814 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.HrNagemetApplicationTests]: HrNagemetApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:35:08.815 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.HrNagemetApplicationTests
+2026-01-05 18:35:08.888 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-05 18:35:08.897 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-05 18:35:08.904 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-01-05 18:35:09.011 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-01-05 18:37:43.674 [main] INFO  c.e.hrnagemet.EmpControllerTest - Starting EmpControllerTest using Java 17.0.15 with PID 1860 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:37:43.677 [main] INFO  c.e.hrnagemet.EmpControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:37:46.601 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:37:47.351 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-05 18:37:47.351 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-05 18:37:47.352 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-01-05 18:37:47.401 [main] INFO  c.e.hrnagemet.EmpControllerTest - Started EmpControllerTest in 4.087 seconds (process running for 5.485)
+2026-01-05 18:37:48.036 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-05 18:37:48.323 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28e24663
+2026-01-05 18:37:48.324 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-05 18:37:48.368 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ================  操作日志  ================
+2026-01-05 18:37:48.368 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 操作名称   : id查询员工
+2026-01-05 18:37:48.368 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求 URL   : http://localhost/employees/7369
+2026-01-05 18:37:48.369 [main] INFO  c.example.hrnagemet.aspect.LogAspect - HTTP 方法  : GET
+2026-01-05 18:37:48.369 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行方法   : com.example.hrnagemet.controller.EmployeeController.getEmployee
+2026-01-05 18:37:48.369 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求参数   : [7369]
+2026-01-05 18:37:48.369 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行耗时   : 351 ms
+2026-01-05 18:37:48.369 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 返回结果   : Result(code=200, msg=操作成功, data=Employee(empno=7369, ename=马云, status=在职, job=职员, mgr=7902, hiredate=1980-12-17, sal=800.00, comm=null, deptno=20, emergencyContacts=[{name=张女士, methods=[{type=phone, value=13800000001}, {type=wechat, value=jack_wife}], relation=配偶}, {name=马老先生, methods=[{type=phone, value=13900000001}], relation=父亲}], contact_info=12488456182, email=2490782555@qq.com))
+2026-01-05 18:37:48.380 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ===========================================
+2026-01-05 18:37:48.502 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.EmpServiceTest]: EmpServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:37:48.504 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.EmpServiceTest
+2026-01-05 18:37:48.537 [main] INFO  c.example.hrnagemet.EmpServiceTest - Starting EmpServiceTest using Java 17.0.15 with PID 1860 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:37:48.538 [main] INFO  c.example.hrnagemet.EmpServiceTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:37:49.001 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:37:49.106 [main] INFO  c.example.hrnagemet.EmpServiceTest - Started EmpServiceTest in 0.598 seconds (process running for 7.19)
+2026-01-05 18:37:49.127 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-01-05 18:37:49.201 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@154208f2
+2026-01-05 18:37:49.201 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-01-05 18:37:49.384 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.HrNagemetApplicationTests]: HrNagemetApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:37:49.387 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.HrNagemetApplicationTests
+2026-01-05 18:37:49.451 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-05 18:37:49.501 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-05 18:37:49.503 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-01-05 18:37:49.547 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-01-05 18:40:01.386 [main] INFO  c.e.hrnagemet.EmpControllerTest - Starting EmpControllerTest using Java 17.0.15 with PID 4276 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:40:01.388 [main] INFO  c.e.hrnagemet.EmpControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:40:04.638 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:40:05.254 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-05 18:40:05.254 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-05 18:40:05.255 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-01-05 18:40:05.297 [main] INFO  c.e.hrnagemet.EmpControllerTest - Started EmpControllerTest in 4.576 seconds (process running for 6.925)
+2026-01-05 18:40:06.116 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-05 18:40:06.368 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61075589
+2026-01-05 18:40:06.370 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-05 18:40:06.456 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ================  操作日志  ================
+2026-01-05 18:40:06.456 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 操作名称   : id查询员工
+2026-01-05 18:40:06.456 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求 URL   : http://localhost/employees/7369
+2026-01-05 18:40:06.456 [main] INFO  c.example.hrnagemet.aspect.LogAspect - HTTP 方法  : GET
+2026-01-05 18:40:06.456 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行方法   : com.example.hrnagemet.controller.EmployeeController.getEmployee
+2026-01-05 18:40:06.457 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求参数   : [7369]
+2026-01-05 18:40:06.457 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行耗时   : 400 ms
+2026-01-05 18:40:06.457 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 返回结果   : Result(code=200, msg=操作成功, data=Employee(empno=7369, ename=马云, status=在职, job=职员, mgr=7902, hiredate=1980-12-17, sal=800.00, comm=null, deptno=20, emergencyContacts=[{name=张女士, methods=[{type=phone, value=13800000001}, {type=wechat, value=jack_wife}], relation=配偶}, {name=马老先生, methods=[{type=phone, value=13900000001}], relation=父亲}], contact_info=12488456182, email=2490782555@qq.com))
+2026-01-05 18:40:06.465 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ===========================================
+2026-01-05 18:40:06.677 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.EmpServiceTest]: EmpServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:40:06.680 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.EmpServiceTest
+2026-01-05 18:40:06.725 [main] INFO  c.example.hrnagemet.EmpServiceTest - Starting EmpServiceTest using Java 17.0.15 with PID 4276 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:40:06.725 [main] INFO  c.example.hrnagemet.EmpServiceTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:40:07.349 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:40:07.461 [main] INFO  c.example.hrnagemet.EmpServiceTest - Started EmpServiceTest in 0.774 seconds (process running for 9.088)
+2026-01-05 18:40:07.482 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-01-05 18:40:07.664 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1b3fadda
+2026-01-05 18:40:07.664 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-01-05 18:40:07.792 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.HrNagemetApplicationTests]: HrNagemetApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:40:07.794 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.HrNagemetApplicationTests
+2026-01-05 18:40:07.863 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-05 18:40:07.869 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-05 18:40:07.876 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-01-05 18:40:07.877 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2026-01-05 18:48:27.448 [main] INFO  c.e.hrnagemet.EmpControllerTest - Starting EmpControllerTest using Java 17.0.15 with PID 13372 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:48:27.450 [main] INFO  c.e.hrnagemet.EmpControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:48:30.590 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:48:31.311 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-01-05 18:48:31.311 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-01-05 18:48:31.312 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2026-01-05 18:48:31.351 [main] INFO  c.e.hrnagemet.EmpControllerTest - Started EmpControllerTest in 4.579 seconds (process running for 6.884)
+2026-01-05 18:48:32.313 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-01-05 18:48:32.608 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@afef67
+2026-01-05 18:48:32.610 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-01-05 18:48:32.650 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ================  操作日志  ================
+2026-01-05 18:48:32.650 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 操作名称   : 删除员工
+2026-01-05 18:48:32.651 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求 URL   : http://localhost/employees/7900
+2026-01-05 18:48:32.651 [main] INFO  c.example.hrnagemet.aspect.LogAspect - HTTP 方法  : DELETE
+2026-01-05 18:48:32.651 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行方法   : com.example.hrnagemet.controller.EmployeeController.deleteEmployee
+2026-01-05 18:48:32.651 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求参数   : [7900]
+2026-01-05 18:48:32.651 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行耗时   : 389 ms
+2026-01-05 18:48:32.651 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 返回结果   : Result(code=200, msg=操作成功, data=删除成功)
+2026-01-05 18:48:32.652 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ===========================================
+2026-01-05 18:48:32.911 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ================  操作日志  ================
+2026-01-05 18:48:32.911 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 操作名称   : id查询员工
+2026-01-05 18:48:32.912 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求 URL   : http://localhost/employees/7369
+2026-01-05 18:48:32.912 [main] INFO  c.example.hrnagemet.aspect.LogAspect - HTTP 方法  : GET
+2026-01-05 18:48:32.912 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行方法   : com.example.hrnagemet.controller.EmployeeController.getEmployee
+2026-01-05 18:48:32.912 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求参数   : [7369]
+2026-01-05 18:48:32.912 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行耗时   : 73 ms
+2026-01-05 18:48:32.913 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 返回结果   : Result(code=200, msg=操作成功, data=Employee(empno=7369, ename=马云, status=在职, job=职员, mgr=7902, hiredate=1980-12-17, sal=800.00, comm=null, deptno=20, emergencyContacts=[{name=张女士, methods=[{type=phone, value=13800000001}, {type=wechat, value=jack_wife}], relation=配偶}, {name=马老先生, methods=[{type=phone, value=13900000001}], relation=父亲}], contact_info=12488456182, email=2490782555@qq.com))
+2026-01-05 18:48:32.925 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ===========================================
+2026-01-05 18:48:33.082 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ================  操作日志  ================
+2026-01-05 18:48:33.082 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 操作名称   : 添加员工
+2026-01-05 18:48:33.083 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求 URL   : http://localhost/employees
+2026-01-05 18:48:33.083 [main] INFO  c.example.hrnagemet.aspect.LogAspect - HTTP 方法  : POST
+2026-01-05 18:48:33.083 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行方法   : com.example.hrnagemet.controller.EmployeeController.addEmployee
+2026-01-05 18:48:33.083 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求参数   : [Employee(empno=8019, ename=新员工, status=null, job=测试, mgr=null, hiredate=null, sal=null, comm=null, deptno=20, emergencyContacts=null, contact_info=null, email=null)]
+2026-01-05 18:48:33.083 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行耗时   : 40 ms
+2026-01-05 18:48:33.083 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 返回结果   : Result(code=200, msg=操作成功, data=Employee(empno=8019, ename=新员工, status=null, job=测试, mgr=null, hiredate=null, sal=null, comm=null, deptno=20, emergencyContacts=null, contact_info=null, email=null))
+2026-01-05 18:48:33.084 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ===========================================
+2026-01-05 18:48:33.157 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ================  操作日志  ================
+2026-01-05 18:48:33.158 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 操作名称   : 修改员工部门
+2026-01-05 18:48:33.158 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求 URL   : http://localhost/employees/transfer
+2026-01-05 18:48:33.158 [main] INFO  c.example.hrnagemet.aspect.LogAspect - HTTP 方法  : PUT
+2026-01-05 18:48:33.158 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行方法   : com.example.hrnagemet.controller.EmployeeController.transferEmployee
+2026-01-05 18:48:33.159 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 请求参数   : [{empno=7369, deptno=30}]
+2026-01-05 18:48:33.159 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 执行耗时   : 63 ms
+2026-01-05 18:48:33.159 [main] INFO  c.example.hrnagemet.aspect.LogAspect - 返回结果   : Result(code=200, msg=操作成功, data=Employee(empno=7369, ename=马云, status=在职, job=职员, mgr=7902, hiredate=1980-12-17, sal=800.00, comm=null, deptno=30, emergencyContacts=[{name=张女士, methods=[{type=phone, value=13800000001}, {type=wechat, value=jack_wife}], relation=配偶}, {name=马老先生, methods=[{type=phone, value=13900000001}], relation=父亲}], contact_info=12488456182, email=2490782555@qq.com))
+2026-01-05 18:48:33.159 [main] INFO  c.example.hrnagemet.aspect.LogAspect - ===========================================
+2026-01-05 18:48:33.180 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.EmpServiceTest]: EmpServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:48:33.184 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.EmpServiceTest
+2026-01-05 18:48:33.225 [main] INFO  c.example.hrnagemet.EmpServiceTest - Starting EmpServiceTest using Java 17.0.15 with PID 13372 (started by notca in D:\Tech\Code\notfl\hr-nagemet)
+2026-01-05 18:48:33.226 [main] INFO  c.example.hrnagemet.EmpServiceTest - No active profile set, falling back to 1 default profile: "default"
+2026-01-05 18:48:33.826 [main] INFO  o.s.v.b.OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-05 18:48:33.931 [main] INFO  c.example.hrnagemet.EmpServiceTest - Started EmpServiceTest in 0.74 seconds (process running for 9.464)
+2026-01-05 18:48:33.955 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-01-05 18:48:34.147 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@4e74470b
+2026-01-05 18:48:34.147 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-01-05 18:48:34.507 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.hrnagemet.HrNagemetApplicationTests]: HrNagemetApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-01-05 18:48:34.509 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.hrnagemet.HrApp for test class com.example.hrnagemet.HrNagemetApplicationTests
+2026-01-05 18:48:34.656 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-01-05 18:48:34.677 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-01-05 18:48:34.685 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2026-01-05 18:48:34.801 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
