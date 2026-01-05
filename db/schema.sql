@@ -12,7 +12,7 @@ CREATE TABLE dept (
 );
 
 -- 插入部门数据
-INSERT INTO dept (deptno, dname, loc) VALUES
+INSERT INTO dept (deptno, dname, loc,deleted) VALUES
                                           (0, '待分配', '未知'),
                                           (10, '财务部', '北京'),
                                           (20, '研发部', '深圳'),
@@ -20,6 +20,7 @@ INSERT INTO dept (deptno, dname, loc) VALUES
                                           (40, '运营部', '广州'),
                                           (50, '研究院', '杭州'),
                                           (60, '人事部', '成都');
+
 
 -- 创建员工状态枚举类型
 CREATE TYPE emp_status AS ENUM ('在职', '待入职', '暂停', '请假', '离职');

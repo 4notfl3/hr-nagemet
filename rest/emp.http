@@ -22,14 +22,14 @@ GET http://localhost:8080/employees/dept/20
 GET http://localhost:8080/employees/7369
 
 ###员工删除
-DELETE http://localhost:8080/employees/8013
+DELETE http://localhost:8080/employees/8000
 
 ###员工修改部门
 PUT http://localhost:8080/employees/transfer
 Content-Type: application/json
 
 {
-  "empno": 8012,
+  "empno": 8013,
   "deptno": 80
 }
 

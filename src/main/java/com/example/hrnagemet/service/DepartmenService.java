@@ -8,4 +8,11 @@ import com.example.hrnagemet.entity.Departmen;
  * @date 2025/12/22 16:58
  */
 public interface DepartmenService extends IService<Departmen> {
+    //删除部门
+    boolean deleteDeptAndResetEmployees(Integer deptno);
+    //恢复部门
+    boolean restoreDept(Integer deptno);
+
+    Integer findMaxNoTotal();
+
 }

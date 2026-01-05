@@ -4,23 +4,39 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.hrnagemet.dao.EmployeeDao">
 
-    <select id="selectEmployeeDetailPage" resultType="com.example.hrnagemet.entity.EmployeeVO">
+    <resultMap id="BaseEmployeeMap" type="com.example.hrnagemet.entity.Employee">
+        <id column="empno" property="empno"/>
+        <result column="contact_info" property="contactInfo" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectAllEmployeePage" resultType="com.example.hrnagemet.entity.vo.EmployeeAdminVO">
         SELECT
-        e.empno,
-        e.ename,
-        d.dname,
+        e.empno, e.ename, d.dname,
+        e.contact_info as contactInfo, -- 别名对齐 VO 属性
         (COALESCE(e.sal, 0) + COALESCE(e.comm, 0)) AS totalIncome,
         s.grade AS salaryGrade,
-        (SELECT STRING_AGG(sub.ename, ', ') FROM emp sub WHERE sub.mgr = e.empno) AS subordinates,
-        e.emergency_contacts AS emergencyContacts
+        (SELECT STRING_AGG(sub.ename, ', ') FROM emp sub WHERE sub.mgr = e.empno) AS subordinates
         FROM emp e
         LEFT JOIN dept d ON e.deptno = d.deptno
         LEFT JOIN salgrade s ON (COALESCE(e.sal, 0) + COALESCE(e.comm, 0)) BETWEEN s.losal AND s.hisal
         <where>
             <if test="ename != null and ename != ''">
-                e.ename LIKE CONCAT('%', #{ename}, '%')
+                AND e.ename LIKE CONCAT('%', #{ename}, '%')
             </if>
         </where>
+    </select>
+
+    <select id="selectEmployeeDeptList" resultType="com.example.hrnagemet.entity.vo.EmployeeDeptVO">
+        SELECT
+        e.empno, e.ename, e.job, e.hiredate,
+        e.contact_info as contactInfo,
+        m.ename as managerName
+        FROM emp e
+        LEFT JOIN emp m ON e.mgr = m.empno
+        WHERE e.deptno = #{deptno}
+        <if test="ename != null and ename != ''">
+            AND e.ename LIKE CONCAT('%', #{ename}, '%')
+        </if>
         ORDER BY e.empno ASC
     </select>
 

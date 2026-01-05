@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: hr-nagemet
+  datasource:
+    url: jdbc:postgresql://localhost:5432/hr?stringtype=unspecified
+    username: hr
+    password: '251222'
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+logging:
+  file:
+    name: logs/hr-app.log
+  level:
+    root: info
+    com.example.hrnagemet: info
+    com.example.hrnagemet.aspect: debug

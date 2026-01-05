@@ -1,4 +1,4 @@
-###单个部门查询
+###id查询部门
 GET http://localhost:8080/departments/30
 
 ###所有部门查询
@@ -9,22 +9,25 @@ POST http://localhost:8080/departments
 Content-Type: application/json
 
 {
-  "dname":"无敌部",
+  "dname":"临时部",
     "loc":"辽宁"
 }
 
 ###部门删除
-DELETE http://localhost:8080/departments/90
+DELETE http://localhost:8080/departments/80
 
 ###修改部门信息
 PUT http://localhost:8080/departments
 Content-Type: application/json
 
 {
-  "deptno": 80,
+  "deptno": 70,
   "dname":"无敌部",
   "loc":"北京"
 }
+
+### 恢复部门
+PUT http://localhost:8080/departments/restore/80
 
 
 
